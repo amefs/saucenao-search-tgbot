@@ -20,7 +20,8 @@ SAUCENAO_APIKEY=
 TG_TOKEN=
 WEBHOOK_URL=
 DEBUG=saucenao-tg:*
-DATABASE_URL=
+DB_TYPE=pg
+DB_URL=
 MINIUM_SIMILARITY=50
 MAX_RESULT_COUNT=3
 ```
@@ -33,9 +34,9 @@ MAX_RESULT_COUNT=3
 
 It should be `https://your-app-name.herokuapp.com`.
 
-#### DATABASE_URL
+#### DB_URL
 
-In the dashboard of your Heroku app, click the **Heroku Postgres** addon and go to the setting page and find the value of **URI**. Simply fill it to `DATABASE_URL`.
+In the dashboard of your Heroku app, click the **Heroku Postgres** addon and go to the setting page and find the value of **URI**. Simply fill it to `DB_URL`.
 
 ### Local
 
@@ -47,7 +48,8 @@ SAUCENAO_APIKEY=
 TG_TOKEN=
 WEBHOOK_URL=
 DEBUG=saucenao-tg:*
-DATABASE_URL=
+DB_TYPE=pg
+DB_URL=
 MINIUM_SIMILARITY=50
 MAX_RESULT_COUNT=3
 ```
@@ -58,11 +60,11 @@ MAX_RESULT_COUNT=3
 
 It is some URL that is publicly accessible through the Internet. For example, http://your.domain.com or http://123.45.67.89 (Your ip)
 
-#### DATABASE_URL
+#### DB_URL
 
 You can install a PostgreSQL on your local computer or find some **PostgreSQL as a service** to use.
 
-The format of `DATABASE_URL` should be: `postgresql://DB_USER:DB_USER_PASS@DB_URL:DB_PORT/DB_NAME`
+The format of `DB_URL` should be: `postgresql://DB_USER:DB_USER_PASS@DB_URL:DB_PORT/DB_NAME`
 
 #### Local deploy without a publicly accessible ip
 
