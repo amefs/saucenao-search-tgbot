@@ -7,7 +7,12 @@ const log = debug('saucenao-tg:db')
 const opts: Knex.Config = {}
 if (process.env.DB_TYPE && process.env.DB_URL) {
 	opts.client = process.env.DB_TYPE
-	opts.connection = process.env.DB_URL
+	opts.connection = {
+		connectionString: process.env.DB_URL,
+		ssl: {
+			rejectUnauthorized: false
+		}
+	}
 }
 const db = Knex(opts)
 
